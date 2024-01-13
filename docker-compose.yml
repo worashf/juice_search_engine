@@ -1,0 +1,32 @@
+version: "3.8"
+
+services:
+  db:
+    image: postgres:latest
+    environment:
+       - POSTGRES_PASSWORD=postgres
+
+    volumes:
+      - ./tmp/db:/var/lib/postgresql/data
+
+  app:
+    build: .
+    command: bundle exec rails s -p 3000 -b '0.0.0.0'
+    environment:
+     - DATABASE_URL=postgres://postgres:postgres@db
+    volumes:
+      - .:/search-engine
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+
+  test:
+    build: .
+    command: bundle exec rspec
+    environment:
+      - DATABASE_URL=postgres://postgres:postgres@db/search_engine_test
+    volumes:
+      - .:/search-engine
+    depends_on:
+      - db
