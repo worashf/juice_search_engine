@@ -1,0 +1,24 @@
+<!-- app/views/layouts/application.html.erb -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DashSearchEngine</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="bg-white" style="min-height: 100vh; position: relative; padding-bottom: 56px;">
+      <%= render 'shared/header' %>
+      <%= yield %>
+    </div>
+
+    <%= render 'shared/footer', class: 'fixed-bottom' %>
+  </body>
+</html>

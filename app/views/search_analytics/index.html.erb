@@ -1,0 +1,70 @@
+<section class="container">
+  <h1 class="text-success mt-3 text-center">Search Analytics</h1>
+
+  <div class="d-flex justify-content-between mt-5">
+    <h5 class="text-info">User: <%= @user.name %></h5>
+
+  </div>
+
+
+  <div class="mb-5">
+    <h2 class="text-info">User Prompts</h2>
+    <table class="table table-striped table-bordered table-hover">
+      <thead class="table-success">
+        <tr>
+          <th>Prompt</th>
+          <th>Count</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @user_prompts.each do |prompt, count| %>
+          <tr>
+            <td><%= prompt %></td>
+            <td><%= count %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+
+
+  <div class="mb-5">
+    <h2 class="text-info">Most Searched Term</h2>
+    <table class="table table-striped table-bordered table-hover">
+      <thead class="table-success">
+        <tr>
+          <th>Prompt</th>
+          <th>Count</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @most_searched_term.each do |analytics| %>
+          <tr>
+            <td><%= analytics.prompt %></td>
+            <td><%= analytics.prompt_count %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="mb-5">
+    <h2 class="text-info">Most Searched Articles</h2>
+    <table class="table table-striped table-bordered table-hover">
+      <thead class="table-success">
+        <tr>
+          <th>Article ID</th>
+          <th>Count</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @most_searched_articles.each do |analytics| %>
+          <tr>
+            <td><%= analytics.article_id %></td>
+            <td><%= analytics.article_count %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</section>

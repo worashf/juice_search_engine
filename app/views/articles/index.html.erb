@@ -1,0 +1,36 @@
+<!-- app/views/articles/index.html.erb -->
+
+<div class="container mt-5">
+
+  <%= form_with(url: articles_path, method: :get, data: { controller: "search-form", turbo_frame: "articles", turbo_action: "advance" }) do |form| %>
+    <div class="input-group mt-3">
+      <%= form.text_field :query, class: "form-control", placeholder: "Search Articles...", autocomplete: "off", data: { action: "input->search-form#search" } %>
+
+      <div class="input-group-append">
+        <button type="submit" class="btn btn-primary">
+          Search
+        </button>
+      </div>
+    </div>
+  <% end %>
+
+  <h1 class="mb-4">List of Articles</h1>
+
+
+  <% @articles.each do |article| %>
+    <div class="card mb-3">
+      <div class="card-body">
+        <h5 class="card-title"><%= article.title %></h5>
+        <p class="card-text"><%= article.body %></p>
+      </div>
+    </div>
+  <% end %>
+
+  <div class="digg_pagination">
+    <div class="page_info">
+      <%= page_entries_info @articles %>
+    </div>
+    <%= will_paginate @articles, :container => false %>
+  </div>
+
+</div>
