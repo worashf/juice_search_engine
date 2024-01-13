@@ -1,0 +1,23 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+
+development:
+  <<: *default
+  database: search_engine_development
+  host: localhost
+  user: postgres
+  template: template0
+
+test:
+  <<: *default
+  database: search_engine_test
+  host: localhost
+  user: postgres
+  template: template0
+
+production:
+  <<: *default
+  database: search_engine_production
+  host: localhost
+  user: postgres
