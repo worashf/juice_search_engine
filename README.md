@@ -67,6 +67,8 @@ To run the tests, configure it first:
 
 2. Visit the application and start searching for articles in the real-time search box.
 
+ # Live Demo
+  [Juice search engine](https://searchengine-6ma3.onrender.com/)
 # Tests
 
 To run unit and integration tests, execute the following command in the root project's directory:
