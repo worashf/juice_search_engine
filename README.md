@@ -108,11 +108,11 @@ The optimizations have been thoroughly tested, specifically with a dataset of 10
 
 Before implementing vector search, the application took 54ms to search for an article from a pool of 1000 articles based on the title. You can observe this in the image below:
 
-![screenshot](without-vector-search.png)
+![screenshot](screenshot/without-vector-search.png)
 
 After incorporating vector search, the search time has significantly improved. It now takes only 0.5ms to search for an article from the same pool of 1000 articles based on the title. The enhanced performance is demonstrated in the image below:
 
-![screenshot](withvector.png)
+![screenshot](screenshot/withvector.png)
 
 
 # Authors
