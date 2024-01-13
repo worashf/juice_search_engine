@@ -113,11 +113,6 @@ GEM
     error_highlight (0.6.0)
     erubi (1.12.0)
     execjs (2.9.1)
-    factory_bot (6.4.5)
-      activesupport (>= 5.0.0)
-    factory_bot_rails (6.4.3)
-      factory_bot (~> 6.4)
-      railties (>= 5.0.0)
     faker (3.2.2)
       i18n (>= 1.8.11, < 2)
     ffi (1.16.3)
@@ -318,7 +313,6 @@ DEPENDENCIES
   capybara
   debug
   error_highlight (>= 0.4.0)
-  factory_bot_rails
   faker (~> 3.2, >= 3.2.2)
   fuzzy-string-match (~> 1.0, >= 1.0.1)
   importmap-rails
