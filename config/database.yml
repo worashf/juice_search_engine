@@ -18,6 +18,7 @@ test:
 
 production:
   <<: *default
+  url: <%= ENV["DATABASE_URL"] %>
   database: search_engine_production
-  host: localhost
-  user: postgres
+  username: render_deploy
+  password: <%= ENV["RENDER_DEPLOY_DB_PASSWORD"] %>
