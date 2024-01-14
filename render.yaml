@@ -9,7 +9,6 @@ services:
     runtime: ruby
     plan: free
     buildCommand: "./bin/render-build.sh"
-    # preDeployCommand: "./bin/rails db:migrate" # preDeployCommand only available on paid instance types
     startCommand: "./bin/rails server"
     envVars:
       - key: DATABASE_URL
@@ -19,4 +18,4 @@ services:
       - key: RAILS_MASTER_KEY
         sync: false
       - key: WEB_CONCURRENCY
-        value: 2 # sensible default for Rails 7.1.2
+        value: 2 
