@@ -29,7 +29,7 @@ Juice Search Engine is a real-time search box application that empowers users to
 
 - [pg-search](https://github.com/Casecommons/pg_search) - Enables efficient search capabilities in PostgreSQL.
 - [faker](https://github.com/faker-ruby/faker) - A library for generating fake data for testing.
-- [fuzzy-string-match](https://github.com/seamusabshere/fuzzy-string-match) - Provides fuzzy string matching algorithms.
+- [fuzzy-string-match](https://github.com/kiyoka/fuzzy-string-match) - Provides fuzzy string matching algorithms.
 - [will-paginate](https://github.com/mislav/will_paginate) - Handles pagination of search results.
 - [bootstrap](https://getbootstrap.com/) - Front-end framework for building responsive web applications.
 
